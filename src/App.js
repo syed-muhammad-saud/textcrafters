@@ -3,6 +3,7 @@ import Navbar from "./MyComponents/Navbar";
 import Alert from "./MyComponents/Alert";
 import TextForm from "./MyComponents/TextForm";
 import About from "./MyComponents/About";
+// import ContactForm from "./MyComponents/ContactForm";
 import Footer from "./MyComponents/Footer";
 import { useState } from "react";
 import React from "react";
@@ -11,6 +12,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ContactForm from "./MyComponents/ContactForm";
 
 function App() {
   const [mode, setMode] = useState('light'); 
@@ -50,6 +52,7 @@ function App() {
         <div className="container my-5">
           <Routes>
             <Route path="/about" element={<About />} /> {/* Use element instead of component */}
+            <Route path="/contact" element={<ContactForm />} />
             <Route path="/" element={<TextForm heading="Enter the text to analyze below:-" mode={mode} showAlert={showAlert} />} />
           </Routes>
         </div>
